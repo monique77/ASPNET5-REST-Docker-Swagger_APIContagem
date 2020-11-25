@@ -10,5 +10,9 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+- task: UseDotNet@2
+  inputs:
+    packageType: 'sdk'
+    version: '5.0.100'
 - script: dotnet --list-sdks
   displayName: 'Listar versões do .NET pré-instaladas'
