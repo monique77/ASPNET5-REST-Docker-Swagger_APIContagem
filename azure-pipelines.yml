@@ -20,4 +20,11 @@ steps:
   inputs:
     command: 'publish'
     publishWebProjects: true
+    workingDirectory: './APIContagem'
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'apicontagem-publish'
+    publishLocation: 'Container'
+    
 
