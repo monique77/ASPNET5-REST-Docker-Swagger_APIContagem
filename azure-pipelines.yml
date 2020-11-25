@@ -16,3 +16,8 @@ steps:
     version: '5.0.100'
 - script: dotnet --list-sdks
   displayName: 'Listar versões do .NET pré-instaladas'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'publish'
+    publishWebProjects: true
+
